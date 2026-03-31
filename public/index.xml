@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Project</title>
-    <link>http://localhost:1313/</link>
+    <link>https://example.org/</link>
     <description>Recent content on My New Hugo Project</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/readme/</link>
+      <link>https://example.org/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/readme/</guid>
-      <description>&lt;p&gt;&lt;code&gt;Hello World!&lt;/code&gt;&lt;/p&gt;</description>
+      <guid>https://example.org/readme/</guid>
+      <description>&lt;h2 id=&#34;hello-world&#34;&gt;&lt;code&gt;Hello World!&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;pin-true&#34;&gt;pin: true&lt;/h2&gt;</description>
     </item>
   </channel>
 </rss>
