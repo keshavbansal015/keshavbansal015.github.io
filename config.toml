@@ -1,0 +1,27 @@
+baseURL = "https://keshavbansal015.github.io/"
+languageCode = "en-us"
+title = "Keshav Bansal"
+theme = "github-style"
+
+[params]
+  author = "Keshav Bansal"
+  github = "keshavbansal015"
+  linkedin = "keshav-bansal-015"
+  email = "keshavbansal015@gmail.com"
+  url = "https://keshavbansal015.github.io/"
+  lastmod = true
+  rss = true
+  pygmentsCodeFences = true
+  pygmentsUseClasses = true
+  pygmentsStyle = "monokai"
+  keywords = ["Keshav Bansal", "keshavbansal015", "keshavbansal015.github.io", "blog", "google analytics"]
+  location = "Texas"
+  enableSearch = false
+
+  favicon = "/images/favicon.ico"
+  avatar = "/images/vader.png"
+  headerIcon = "/images/github-mark-white.png"
+
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
