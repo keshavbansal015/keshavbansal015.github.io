@@ -2,6 +2,9 @@ baseURL = "https://keshavbansal015.github.io/"
 languageCode = "en-us"
 title = "Keshav Bansal"
 theme = "github-style"
+relativeURLs = true
+canonifyURLs = true
+
 
 [params]
   author = "Keshav Bansal"
