@@ -5,7 +5,6 @@ theme = "github-style"
 
 [params]
   author = "Keshav Bansal"
-  description = "My personal website"
   github = "keshavbansal015"
   linkedin = "keshav-bansal-015"
   email = "keshavbansal015@gmail.com"
