@@ -1,0 +1,74 @@
+{{ define "main" }}
+<header class="page-header">
+    <span class="font-label-caps label">
+        {{ if eq .Section "blogs" }}
+            TECHNICAL JOURNAL
+        {{ else if eq .Section "projects" }}
+            ARCHIVE {{ now.Year }}
+        {{ else if eq .Section "gallery" }}
+            VISUAL JOURNEY
+        {{ else }}
+            {{ upper .Section }}
+        {{ end }}
+    </span>
+    <h1 class="font-h1">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="font-body-lg">{{ . }}</p>
+    {{ end }}
+    <div class="accent-line"></div>
+</header>
+
+{{ if eq .Section "blogs" }}
+<div class="row-list">
+    {{ range .Pages }}
+    <article class="row-item">
+        <div class="date">
+            <span class="font-meta-code">{{ .Date.Format "2006.01.02" }}</span>
+        </div>
+        <div class="content">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary }}</p>
+            <div class="tags">
+                {{ range .Params.tags }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+    </article>
+    {{ end }}
+</div>
+
+{{ else if eq .Section "projects" }}
+<section>
+    {{ range .Pages }}
+    <div class="project-row">
+        <div class="meta">
+            <span class="project-code">{{ .Params.code }}</span>
+            <h3>{{ .Title }}</h3>
+        </div>
+        <p class="font-body-md" style="color: var(--on-surface-variant); margin-bottom: var(--spacing-sm);">{{ .Summary }}</p>
+        <div class="tags">
+            {{ range .Params.tech }}
+            <span class="skill-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</section>
+
+{{ else }}
+<div class="row-list">
+    {{ range .Pages }}
+    <article class="row-item">
+        <div class="date">
+            <span class="font-meta-code">{{ .Date.Format "2006.01.02" }}</span>
+        </div>
+        <div class="content">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary }}</p>
+        </div>
+    </article>
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}

@@ -1,0 +1,96 @@
+{{ define "main" }}
+<header class="page-header" style="border-bottom: 1px solid var(--outline-variant); padding-bottom: var(--spacing-md);">
+    <span class="font-label-caps label">Inquiries & Networking</span>
+    <h1 class="font-h1">Get in Touch</h1>
+</header>
+
+<div class="contact-grid" style="margin-top: var(--spacing-lg);">
+    <!-- Contact Form - Opens in Email Client -->
+    <section class="contact-form">
+        <form id="contactForm" class="space-y-sm">
+            <div class="form-group">
+                <label for="name" class="font-label-caps">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject" class="font-label-caps">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message" class="font-label-caps">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Briefly describe your project or inquiry..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: var(--spacing-sm);">
+                <span class="material-symbols-outlined" style="font-size: 18px;">send</span>
+                Send Message
+            </button>
+        </form>
+        
+        <p style="margin-top: var(--spacing-md); font-size: 13px; color: var(--outline); text-align: center;">
+            This will open your email client. Direct: <a href="mailto:keshavban015@gmail.com" style="color: var(--secondary);">keshavban015@gmail.com</a>
+        </p>
+    </section>
+    
+    <!-- Side Info -->
+    <aside style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+        <div style="border-top: 1px solid var(--outline-variant); padding-top: var(--spacing-md);">
+            <p class="font-body-lg" style="color: var(--secondary); margin-bottom: var(--spacing-md);">
+                I specialize in distributed systems and high-concurrency backend architectures. Whether you're looking for a consultation or have a complex technical challenge, let's connect.
+            </p>
+        </div>
+        
+        <div>
+            <h3 class="font-label-caps section-label">Digital Channels</h3>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" class="social-link">
+                    <div class="icon-text">
+                        <span class="material-symbols-outlined" style="color: var(--secondary);">link</span>
+                        <span class="font-body-md" style="font-weight: 600;">LinkedIn</span>
+                    </div>
+                    <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+                </a>
+                <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" class="social-link">
+                    <div class="icon-text">
+                        <span class="material-symbols-outlined" style="color: var(--secondary);">code</span>
+                        <span class="font-body-md" style="font-weight: 600;">GitHub</span>
+                    </div>
+                    <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+                </a>
+                <a href="mailto:keshavban015@gmail.com" class="social-link">
+                    <div class="icon-text">
+                        <span class="material-symbols-outlined" style="color: var(--secondary);">email</span>
+                        <span class="font-body-md" style="font-weight: 600;">Email</span>
+                    </div>
+                    <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            <span class="font-meta-code" style="color: var(--secondary);">System Status: Optimal</span>
+        </div>
+        <p class="font-meta-code" style="font-size: 12px; color: var(--outline);">
+            Typical response time:<br>
+            &lt; 24 hours (Weekdays)
+        </p>
+    </aside>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        const mailtoLink = `mailto:keshavban015@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Hi Keshav,\n\n' + message + '\n\nBest regards,\n' + name)}`;
+        
+        window.location.href = mailtoLink;
+    });
+</script>
+{{ end }}

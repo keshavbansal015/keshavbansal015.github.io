@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="single-post" style="padding: 0; overflow: hidden;">
+    <div style="position: relative;">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: auto; max-height: 600px; object-fit: cover; display: block;">
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--spacing-xl); background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+            <span class="font-label-caps" style="opacity: 0.8;">{{ .Params.location }}</span>
+            <h1 class="font-h1" style="color: white; margin-top: var(--spacing-xs);">{{ .Title }}</h1>
+        </div>
+    </div>
+    
+    <div style="padding: var(--spacing-xl);">
+        <div class="post-meta">
+            <span class="font-meta-code" style="color: var(--secondary);">{{ .Date.Format "January 2006" }}</span>
+            <span style="color: var(--outline);">|</span>
+            <span class="font-meta-code" style="color: var(--on-surface-variant);">{{ .Params.location }}</span>
+        </div>
+        
+        <div class="post-content" style="margin-top: var(--spacing-lg);">
+            <p class="font-body-lg">{{ .Params.description }}</p>
+            {{ .Content }}
+        </div>
+        
+        <nav style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--outline-variant);">
+            <a href="{{ "/gallery/" | relURL }}" style="display: inline-flex; align-items: center; gap: var(--spacing-xs); color: var(--secondary); text-decoration: none; font-weight: 500;">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back to Gallery
+            </a>
+        </nav>
+    </div>
+</article>
+{{ end }}

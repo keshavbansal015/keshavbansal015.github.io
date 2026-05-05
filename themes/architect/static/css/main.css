@@ -1,0 +1,349 @@
+/* ============================================
+   MAIN CSS - Variables & Base Styles
+   ============================================ */
+
+:root {
+    /* Surface Colors */
+    --surface: #f9f9f9;
+    --surface-dim: #dadada;
+    --surface-bright: #f9f9f9;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f4f3f3;
+    --surface-container: #eeeeee;
+    --surface-container-high: #e8e8e8;
+    --surface-container-highest: #e2e2e2;
+    --on-surface: #1a1c1c;
+    --on-surface-variant: #45464c;
+    --inverse-surface: #2f3131;
+    --inverse-on-surface: #f1f1f1;
+    --outline: #76777d;
+    --outline-variant: #c6c6cd;
+    --surface-tint: #5e5f54;
+    
+    /* Primary Colors */
+    --primary: #202219;
+    --on-primary: #ffffff;
+    --primary-container: #1a1c14;
+    --on-primary-container: #838579;
+    --inverse-primary: #c7c7ba;
+    --primary-fixed: #e3e3d5;
+    --primary-fixed-dim: #c7c7ba;
+    --on-primary-fixed: #1a1c14;
+    --on-primary-fixed-variant: #46483d;
+    
+    /* Secondary Colors */
+    --secondary: #705c31;
+    --on-secondary: #ffffff;
+    --secondary-container: #fcdfa9;
+    --on-secondary-container: #776236;
+    --secondary-fixed: #fcdfa9;
+    --secondary-fixed-dim: #dec38f;
+    --on-secondary-fixed: #261a00;
+    --on-secondary-fixed-variant: #57441c;
+    
+    /* Tertiary Colors */
+    --tertiary: #61603c;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #b0ad83;
+    --on-tertiary-container: #424120;
+    --tertiary-fixed: #e8e5b7;
+    --tertiary-fixed-dim: #cbc89d;
+    --on-tertiary-fixed: #1d1d02;
+    --on-tertiary-fixed-variant: #494827;
+    
+    /* Error Colors */
+    --error: #ba1a1a;
+    --on-error: #ffffff;
+    --error-container: #ffdad6;
+    --on-error-container: #93000a;
+    
+    /* Legacy warm parchment background */
+    --background: #f0f4f3;
+    --on-background: #1a1c1c;
+    --sidebar-bg: #0f172a;
+    --sidebar-border: #1e293b;
+    
+    /* Spacing */
+    --spacing-base: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 48px;
+    --spacing-xl: 80px;
+    --sidebar-width: 280px;
+    --container-max: 1100px;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-default: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--background);
+    color: var(--on-background);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Typography Classes */
+.font-h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.font-h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.font-body-lg {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.font-body-md {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.font-meta-code {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+}
+
+.font-label-caps {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Layout */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--sidebar-border);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    margin-bottom: 48px;
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.sidebar-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    filter: grayscale(0.8);
+    transition: filter 0.3s ease;
+}
+
+.sidebar-profile:hover img {
+    filter: grayscale(0.4);
+}
+
+.sidebar-profile h2 {
+    color: #f1f5f9;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sidebar-profile p {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+    border-radius: 0 6px 6px 0;
+}
+
+.sidebar-nav a:hover {
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.sidebar-nav a.active {
+    color: #f1f5f9;
+    font-weight: 700;
+    border-left-color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 32px;
+    border-top: 1px solid var(--sidebar-border);
+}
+
+.sidebar-social {
+    display: flex;
+    gap: 16px;
+}
+
+.sidebar-social a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: color 0.2s;
+}
+
+.sidebar-social a:hover {
+    color: #f1f5f9;
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    padding: 48px 48px 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.content-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+}
+
+.page-header .label {
+    color: var(--secondary);
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.page-header h1 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+    color: var(--on-surface-variant);
+    max-width: 700px;
+}
+
+.page-header .accent-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    margin-top: var(--spacing-md);
+    border-radius: 2px;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--outline-variant);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-footer p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    color: var(--outline);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.site-footer .footer-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.site-footer a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    color: var(--outline);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.site-footer a:hover {
+    color: var(--primary);
+}
