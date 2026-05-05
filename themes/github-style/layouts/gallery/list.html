@@ -1,0 +1,22 @@
+{{ define "main" }}
+<header class="page-header">
+    <span class="font-label-caps label">Visual Journey</span>
+    <h1 class="font-h1">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="font-body-lg">{{ . }}</p>
+    {{ end }}
+    <div class="accent-line"></div>
+</header>
+
+<div class="gallery-grid">
+    {{ range .Pages }}
+    <a href="{{ .RelPermalink }}" class="gallery-item">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+        <div class="overlay">
+            <h4>{{ .Title }}</h4>
+            <p>{{ .Params.location }}</p>
+        </div>
+    </a>
+    {{ end }}
+</div>
+{{ end }}

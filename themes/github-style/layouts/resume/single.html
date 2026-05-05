@@ -1,0 +1,79 @@
+{{ define "main" }}
+<header class="page-header">
+    <span class="font-label-caps label">Curriculum Vitae</span>
+    <h1 class="font-h1">Professional History</h1>
+    <div class="accent-line"></div>
+</header>
+
+<!-- Experience Section -->
+<section class="resume-section">
+    <div class="two-col">
+        <div>
+            <span class="col-label">Experience</span>
+        </div>
+        <div class="timeline">
+            {{ range .Params.experience }}
+            <div class="timeline-item">
+                <div class="timeline-node"></div>
+                <div class="timeline-header">
+                    <h3>{{ .title }}</h3>
+                    <span class="timeline-period">{{ .period }}</span>
+                </div>
+                <p class="timeline-company">{{ .company }}</p>
+                
+                <div class="job-details">
+                    <div class="job-section">
+                        <h5>Problems Solved</h5>
+                        <ul>
+                            {{ range .problems }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    <div class="job-section">
+                        <h5>Impact</h5>
+                        <ul>
+                            {{ range .impact }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="resume-section">
+    <div class="two-col">
+        <div>
+            <span class="col-label">Education</span>
+        </div>
+        <div class="edu-grid">
+            {{ range .Params.education }}
+            <div class="edu-card">
+                <span class="degree">{{ .degree }}</span>
+                <h4>{{ .institution }}</h4>
+                <p>{{ .focus }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="resume-section" style="border-bottom: none;">
+    <div class="two-col">
+        <div>
+            <span class="col-label">Stack</span>
+        </div>
+        <div class="skills-grid">
+            {{ range .Params.skills }}
+            <span class="skill-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
