@@ -1,7 +1,7 @@
 baseURL = 'https://keshavbansal015.github.io/'
 languageCode = 'en-us'
 title = 'Software Engineer'
-theme = 'architect'
+theme = 'github-style'
 
 [params]
     author = "Keshav Bansal"
