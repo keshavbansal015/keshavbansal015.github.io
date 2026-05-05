@@ -2,6 +2,8 @@ baseURL = 'https://keshavbansal015.github.io/'
 languageCode = 'en-us'
 title = 'Software Engineer'
 theme = 'github-style'
+relativeURLs = true
+canonifyURLs = false
 
 [params]
     author = "Keshav Bansal"
@@ -43,3 +45,14 @@ theme = 'github-style'
         name = "Contact"
         url = "/contact/"
         weight = 60
+
+[module]
+  [[module.mounts]]
+    source = "themes/github-style/layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "themes/github-style/assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "themes/github-style/static"
+    target = "static"
