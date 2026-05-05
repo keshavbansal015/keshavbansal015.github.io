@@ -2,8 +2,8 @@ baseURL = 'https://keshavbansal015.github.io/'
 languageCode = 'en-us'
 title = 'Software Engineer'
 theme = 'github-style'
-relativeURLs = true
-canonifyURLs = false
+relativeURLs = false
+canonifyURLs = true
 
 [params]
     author = "Keshav Bansal"
