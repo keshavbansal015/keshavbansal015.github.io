@@ -1,0 +1,21 @@
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+/* =========================
+   GALLERY ITEM = CARD
+========================= */
+
+// .gallery-item {
+//   /* now just alias of card */
+// }
+
+// .gallery-item {
+//   /* optional: no styling needed anymore */
+// }

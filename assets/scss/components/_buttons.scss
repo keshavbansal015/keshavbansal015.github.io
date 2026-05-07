@@ -1,0 +1,67 @@
+/* =========================
+   BASE BUTTON
+========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-2);
+
+  padding: var(--space-3) var(--space-5);
+
+  border-radius: var(--radius-2);
+  border: none;
+
+  font-family: var(--font-mono);
+  font-size: var(--fs-6);
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              background 0.2s ease,
+              color 0.2s ease;
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.btn-primary {
+  @extend .btn;
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: #8b7347;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   SECONDARY BUTTON
+========================= */
+
+.btn-secondary {
+  background: var(--surface-container-lowest);
+  color: var(--primary);
+  border: 1px solid var(--outline-variant);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-container);
+  border-color: var(--secondary);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+    <article class="single-post animate-fade-in">
+        <header class="post-header">
+            <div class="project-meta-header">
+                <span class="project-code-badge">{{ .Params.code }}</span>
+            </div>
+            <h1>{{ .Title }}</h1>
+            <div class="post-meta">
+                <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                {{ with .Params.readingTime }}
+                    <span>{{ . }}
+                        min read</span>
+                {{ end }}
+            </div>
+            {{ with .Params.tags }}
+                <div class="tags" style="margin-top: var(--space-4);">
+                    {{ range . }}
+                        <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </header>
+
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+    </article>
+
+{{ end }}

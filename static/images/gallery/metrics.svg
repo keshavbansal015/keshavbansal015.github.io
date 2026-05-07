@@ -1,0 +1,70 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8f7f4"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#1a1f2e">API Performance Metrics</text>
+  
+  <!-- Stats Row -->
+  <rect x="50" y="70" width="160" height="80" rx="8" fill="#a68b5b" opacity="0.1"/>
+  <text x="130" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#a68b5b">p50 Latency</text>
+  <text x="130" y="135" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="28" font-weight="700" fill="#a68b5b">12ms</text>
+  
+  <rect x="230" y="70" width="160" height="80" rx="8" fill="#2d3748" opacity="0.1"/>
+  <text x="310" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#2d3748">p95 Latency</text>
+  <text x="310" y="135" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="28" font-weight="700" fill="#2d3748">45ms</text>
+  
+  <rect x="410" y="70" width="160" height="80" rx="8" fill="#4a660c" opacity="0.1"/>
+  <text x="490" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#4a660c">p99 Latency</text>
+  <text x="490" y="135" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="28" font-weight="700" fill="#4a660c">89ms</text>
+  
+  <rect x="590" y="70" width="160" height="80" rx="8" fill="#1a1f2e" opacity="0.1"/>
+  <text x="670" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#1a1f2e">Throughput</text>
+  <text x="670" y="135" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="28" font-weight="700" fill="#1a1f2e">50K/s</text>
+  
+  <!-- Main Chart -->
+  <rect x="50" y="180" width="700" height="350" rx="8" fill="#fff" stroke="#e2ddd4" stroke-width="1"/>
+  <text x="400" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1a1f2e">Response Time Percentiles (24h)</text>
+  
+  <!-- Y-axis labels -->
+  <text x="70" y="250" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">100ms</text>
+  <text x="70" y="310" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">50ms</text>
+  <text x="70" y="370" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">25ms</text>
+  <text x="70" y="430" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">10ms</text>
+  <text x="70" y="490" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">0ms</text>
+  
+  <!-- Grid lines -->
+  <line x1="120" y1="250" x2="720" y2="250" stroke="#e2ddd4" stroke-width="1"/>
+  <line x1="120" y1="310" x2="720" y2="310" stroke="#e2ddd4" stroke-width="1"/>
+  <line x1="120" y1="370" x2="720" y2="370" stroke="#e2ddd4" stroke-width="1"/>
+  <line x1="120" y1="430" x2="720" y2="430" stroke="#e2ddd4" stroke-width="1"/>
+  
+  <!-- X-axis labels -->
+  <text x="150" y="520" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">00:00</text>
+  <text x="270" y="520" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">06:00</text>
+  <text x="390" y="520" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">12:00</text>
+  <text x="510" y="520" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">18:00</text>
+  <text x="630" y="520" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="10" fill="#4a5568">23:59</text>
+  
+  <!-- p50 Line -->
+  <path d="M120 400 Q150 390 180 395 T240 385 T300 390 T360 380 T420 375 T480 380 T540 370 T600 365 T660 360 T720 355" stroke="#a68b5b" stroke-width="3" fill="none"/>
+  
+  <!-- p95 Line -->
+  <path d="M120 350 Q150 340 180 345 T240 330 T300 335 T360 320 T420 315 T480 325 T540 310 T600 305 T660 300 T720 295" stroke="#2d3748" stroke-width="3" fill="none"/>
+  
+  <!-- p99 Line -->
+  <path d="M120 300 Q150 290 180 295 T240 280 T300 285 T360 270 T420 265 T480 275 T540 260 T600 255 T660 250 T720 245" stroke="#4a660c" stroke-width="3" fill="none"/>
+  
+  <!-- Legend -->
+  <rect x="530" y="250" width="15" height="15" rx="2" fill="#a68b5b"/>
+  <text x="555" y="262" font-family="Inter, sans-serif" font-size="11" fill="#1a1f2e">p50</text>
+  
+  <rect x="530" y="275" width="15" height="15" rx="2" fill="#2d3748"/>
+  <text x="555" y="287" font-family="Inter, sans-serif" font-size="11" fill="#1a1f2e">p95</text>
+  
+  <rect x="530" y="300" width="15" height="15" rx="2" fill="#4a660c"/>
+  <text x="555" y="312" font-family="Inter, sans-serif" font-size="11" fill="#1a1f2e">p99</text>
+  
+  <!-- Baseline annotation -->
+  <line x1="120" y1="430" x2="720" y2="430" stroke="#4a660c" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="130" y="445" font-family="Inter, sans-serif" font-size="9" fill="#4a660c">SLA Target: 100ms</text>
+</svg>

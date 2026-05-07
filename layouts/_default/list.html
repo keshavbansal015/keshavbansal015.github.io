@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<section class="page-header animate-fade-in">
+    <span class="label">{{ .Section }}</span>
+    <h1>{{ .Title }}</h1>
+    <div class="accent-line"></div>
+</section>
+
+<section class="row-list">
+    {{ range .Pages }}
+        <article class="card card--row hover-lift animate-fade-in-up">
+            <div class="card-date">
+                {{ .Date.Format "Jan 2006" }}
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">
+                    <a class="animated-link" href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
+                </h3>
+                <p class="card-text">{{ .Summary }}</p>
+            </div>
+        </article>
+    {{ end }}
+</section>
+{{ end }}

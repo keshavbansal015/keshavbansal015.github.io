@@ -1,0 +1,33 @@
+<aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="sidebar-header">
+        <div class="sidebar-profile">
+            <img src="/images/profile.jpg" alt="Profile">
+            <div>
+                <h2>{{ .Site.Params.author }}</h2>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" class="{{ if .Page }}active{{ end }}">
+                {{ .Name }}
+            </a>
+        {{ end }}
+    </nav>
+
+    <div class="sidebar-footer">
+        <div class="sidebar-social">
+            <a href="https://github.com/{{ .Site.Params.github }}">GitHub</a>
+            <a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}">LinkedIn</a>
+        </div>
+    </div>
+
+</aside>

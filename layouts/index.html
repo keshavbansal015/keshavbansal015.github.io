@@ -1,0 +1,64 @@
+{{ define "main" }}
+
+<section class="hero hero-large animate-fade-in">
+    <span class="label">Welcome to my digital garden</span>
+    <h1>Building systems that scale</h1>
+    <p class="hero-description">I'm a backend engineer passionate about distributed systems, performance optimization, and the architecture of high-scale services. This is where I document my journey through code, share insights from production systems, and explore the fascinating world of backend engineering.</p>
+    <div class="hero-actions">
+        <a href="/projects/" class="btn btn-primary">View Projects</a>
+        <a href="/blogs/" class="btn btn-secondary">Read Articles</a>
+    </div>
+    <div class="accent-line"></div>
+</section>
+
+<section class="row-list">
+    <div class="section-header">
+        <h2>Latest Articles</h2>
+        <a href="/blogs/" class="view-all">View all →</a>
+    </div>
+
+    {{ range first 5 (where .Site.RegularPages "Section" "blogs") }}
+        <article class="card card--row">
+            <div class="card-date">
+                {{ .Date.Format "2006.01.02" }}
+            </div>
+            <div class="card-body">
+                <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <p class="card-text">{{ .Summary }}</p>
+                {{ with .Params.tags }}
+                <div class="tags">
+                    {{ range first 3 . }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </article>
+    {{ end }}
+</section>
+
+<section class="featured-projects">
+    <div class="section-header">
+        <h2>Featured Projects</h2>
+        <a href="/projects/" class="view-all">View all →</a>
+    </div>
+    <div class="projects-grid">
+        {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
+        <article class="card card--project">
+            <div class="card-body">
+                <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <p class="card-text">{{ .Params.description }}</p>
+                {{ with .Params.tags }}
+                <div class="tags">
+                    {{ range first 4 . }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

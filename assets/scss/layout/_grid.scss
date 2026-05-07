@@ -1,0 +1,57 @@
+/* =========================
+   APP SHELL GRID
+========================= */
+
+.layout-app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+/* when sidebar is collapsed (mobile/tablet) */
+.layout-app.is-collapsed {
+  grid-template-columns: 1fr;
+}
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.layout-main {
+  grid-column: 2;
+  min-width: 0;
+}
+
+/* =========================
+   SIDEBAR SLOT
+========================= */
+
+.layout-sidebar {
+  grid-column: 1;
+}
+
+/* =========================
+   CONTAINER PRIMITIVE
+========================= */
+
+.layout-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* =========================
+   SIMPLE GRID UTILITIES
+========================= */
+
+.layout-grid-2 .col-label{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-6);
+}
+
+.layout-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}

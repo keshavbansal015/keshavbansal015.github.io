@@ -1,0 +1,17 @@
+{{ $type := .Type }}
+
+{{ $config := dict
+  "blogs" "cards/blog.html"
+  "projects" "cards/project.html"
+  "gallery" "cards/gallery.html"
+}}
+
+{{ $partial := index $config $type }}
+
+{{ if $partial }}
+  {{ partial $partial . }}
+{{ else }}
+  <div>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </div>
+{{ end }}

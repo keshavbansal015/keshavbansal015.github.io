@@ -1,0 +1,19 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("mobileMenuToggle");
+    const sidebar = document.querySelector(".sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    if (!toggle || !sidebar || !overlay) return;
+
+    toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+    });
+});
+</script>

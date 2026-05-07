@@ -1,0 +1,44 @@
+/* =========================
+   BLOG ARTICLE WRAPPER
+========================= */
+
+article.single-post {
+  background: var(--surface-container-lowest);
+
+  border-radius: var(--radius-4);
+  border: 1px solid var(--outline-variant);
+
+  padding: var(--space-8);
+}
+
+/* =========================
+   HEADER (STRUCTURE ONLY)
+========================= */
+
+.post-header {
+  border-bottom: 2px solid var(--outline-variant);
+
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+/* =========================
+   META
+========================= */
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+/* =========================
+   PROSE CONTAINER (IMPORTANT)
+========================= */
+.post-content {
+  /* this is the entire typography system now */
+  @extend .prose;
+}

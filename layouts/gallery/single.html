@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<article class="single-post animate-fade-in">
+
+    <header class="post-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="post-content">
+        {{ with .Params.image }}
+            <div class="card-media" style="margin-bottom: var(--space-6);">
+                <img src="{{ . }}" alt="{{ $.Title }}" style="width: 100%; border-radius: var(--radius-4);">
+            </div>
+        {{ end }}
+
+        {{ .Content }}
+    </div>
+
+</article>
+
+{{ end }}

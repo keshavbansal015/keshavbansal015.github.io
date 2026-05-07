@@ -1,0 +1,14 @@
+<a class="card gallery-item" href="{{ .RelPermalink }}">
+
+    {{ with .Params.image }}
+    <div class="card-media">
+        <img src="{{ . }}" alt="{{ $.Title }}">
+    </div>
+    {{ end }}
+
+    <div class="card-overlay">
+        <h4 class="card-title">{{ .Title }}</h4>
+        <p class="card-text">{{ .Params.caption | default .Summary }}</p>
+    </div>
+
+</a>

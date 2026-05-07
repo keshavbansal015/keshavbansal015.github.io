@@ -1,0 +1,166 @@
+/* =========================
+   PROSE SYSTEM (RICH TEXT)
+   applies to markdown content
+========================= */
+
+.prose {
+  font-size: var(--fs-4);
+  line-height: var(--lh-loose);
+  color: var(--on-surface);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.prose h1 {
+  font-size: var(--fs-1);
+  font-weight: 700;
+  margin: var(--space-8) 0 var(--space-4);
+  color: var(--primary);
+}
+
+.prose h2 {
+  font-size: var(--fs-2);
+  font-weight: 600;
+
+  margin: var(--space-6) 0 var(--space-4);
+
+  color: var(--primary);
+  padding-bottom: var(--space-2);
+
+  border-bottom: 2px solid var(--outline-variant);
+}
+
+.prose h3 {
+  font-size: 22px;
+  font-weight: 600;
+
+  margin: var(--space-5) 0 var(--space-3);
+  color: var(--secondary);
+}
+
+/* =========================
+   PARAGRAPHS
+========================= */
+
+.prose p {
+  margin-bottom: var(--space-4);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.prose a {
+  color: var(--secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.prose a:hover {
+  border-bottom-color: var(--secondary);
+}
+
+/* =========================
+   INLINE CODE
+========================= */
+
+.prose code {
+  background: var(--surface-container);
+  padding: 3px 8px;
+  border-radius: var(--radius-1);
+
+  font-family: var(--font-mono);
+  font-size: var(--fs-5);
+
+  color: var(--primary);
+}
+
+/* =========================
+   CODE BLOCKS
+========================= */
+
+.prose pre {
+  background: var(--primary);
+  color: var(--on-primary);
+
+  padding: var(--space-5);
+  border-radius: var(--radius-3);
+
+  overflow-x: auto;
+  margin: var(--space-5) 0;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* =========================
+   LISTS
+========================= */
+
+.prose ul,
+.prose ol {
+  margin: var(--space-4) 0;
+  padding-left: var(--space-6);
+}
+
+.prose li {
+  margin-bottom: var(--space-2);
+}
+
+/* =========================
+   BLOCKQUOTE
+========================= */
+
+.prose blockquote {
+  border-left: 4px solid var(--secondary);
+
+  padding-left: var(--space-4);
+  margin: var(--space-5) 0;
+
+  color: var(--on-surface-variant);
+  font-style: italic;
+}
+
+/* =========================
+   TABLES
+========================= */
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+
+  margin: var(--space-5) 0;
+
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-2);
+
+  overflow: hidden;
+}
+
+.prose th {
+  background: var(--primary);
+  color: var(--on-primary);
+
+  padding: var(--space-3) var(--space-4);
+
+  font-family: var(--font-mono);
+  font-size: var(--fs-6);
+  font-weight: 600;
+
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.prose td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.prose tr:hover {
+  background: var(--surface-container);
+}

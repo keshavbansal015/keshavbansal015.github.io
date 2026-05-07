@@ -1,0 +1,133 @@
+{{ define "main" }}
+
+<section class="page-header animate-fade-in">
+    <span class="label">Get in Touch</span>
+    <h1>Contact</h1>
+    <p>Have a question about distributed systems, want to collaborate on an open-source project, or interested in working together? I'd love to hear from you. Fill out the form below and I'll get back to you within 24-48 hours.</p>
+    <div class="accent-line"></div>
+</section>
+
+<div class="contact-layout">
+    <section class="contact-form-section">
+        <form class="contact-form" id="contactForm" action="mailto:keshavbansal015@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">
+                        <span>Name</span>
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" autocomplete="name" id="name" name="name" class="form-input" placeholder="John Doe" required aria-describedby="name-help">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        <span>Email</span>
+                        <span class="required">*</span>
+                    </label>
+                    <input type="email" autocomplete="email" id="email" name="email" class="form-input" placeholder="john@example.com" required aria-describedby="email-help">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" class="form-input">
+                    <option value="">Select a topic...</option>
+                    <option value="Consulting Inquiry">Consulting Inquiry</option>
+                    <option value="Project Collaboration">Project Collaboration</option>
+                    <option value="Open Source Collaboration">Open Source Collaboration</option>
+                    <option value="Speaking Request">Speaking Request</option>
+                    <option value="Technical Question">Technical Question</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group message-group">
+                <label for="message">
+                    <span>Message</span>
+                    <span class="required">*</span>
+                </label>
+                <textarea id="message" name="message" rows="8" class="form-input message-textarea" placeholder="Tell me about your project, question, or idea..." required minlength="20" aria-describedby="message-help"></textarea>
+                <span class="form-hint" id="message-help">Minimum 20 characters</span>
+            </div>
+
+            <div class="form-actions">
+                <button class="btn btn-send" type="submit">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    <span>Send Message</span>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <aside class="contact-sidebar">
+        <div class="contact-info-card">
+            <h3>Let's Connect</h3>
+            <p>I'm always interested in discussing backend architecture, distributed systems, and high-performance computing. Whether you have a specific technical challenge or just want to chat about the latest in systems design, don't hesitate to reach out.</p>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <span class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:keshavbansal015@gmail.com">keshavbansal015@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <span class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">Connect with me</a>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <span class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>GitHub</strong>
+                        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" rel="noopener">View my projects</a>
+                    </div>
+                </div>
+                <!-- Once we have good content on X -->
+                <!-- <div class="contact-method">
+                    <span class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>Twitter</strong>
+                        <a href="https://x.com/{{ .Site.Params.twitter }}" target="_blank" rel="noopener">@{{ .Site.Params.twitter }}</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="availability-card">
+            <h4>Current Availability</h4>
+            <div class="status-indicator">
+                <span class="status-dot available"></span>
+                <span class="status-text">Open to consulting opportunities</span>
+            </div>
+            <p class="status-note">Currently accepting new projects for Q2 2026. Response time: 24-48 hours.</p>
+        </div>
+    </aside>
+</div>
+
+{{ end }}

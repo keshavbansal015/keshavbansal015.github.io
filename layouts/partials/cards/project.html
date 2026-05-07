@@ -1,0 +1,29 @@
+<article class="card card--project">
+
+    {{ with .Params.image }}
+    <div class="card-media" style="margin-bottom: var(--space-4);">
+        <img src="{{ . }}" alt="{{ $.Title }}" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-2);">
+    </div>
+    {{ end }}
+
+    <div class="card-meta">
+        {{ with .Params.code }}
+            <span class="project-code">{{ . }}</span>
+        {{ end }}
+    </div>
+
+    <h3 class="card-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
+
+    <p class="card-text">{{ .Params.description | default .Summary }}</p>
+
+    {{ with .Params.tags }}
+    <div class="tags">
+        {{ range . }}
+            <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+</article>

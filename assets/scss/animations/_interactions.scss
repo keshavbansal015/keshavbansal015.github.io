@@ -1,0 +1,71 @@
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+.grid-pattern {
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 0;
+
+  opacity: 0.08;
+
+  background-image:
+    linear-gradient(rgba(26, 31, 46, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 31, 46, 0.6) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+}
+
+
+/* =========================
+   ANIMATION UTILITIES
+========================= */
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+
+/* =========================
+   INTERACTION UTILITIES
+========================= */
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.animated-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+
+  bottom: -2px;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--tertiary)
+  );
+
+  transition: width 0.3s ease;
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+

@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<section class="page-header animate-fade-in">
+    <span class="label">Taxonomy</span>
+    <h1>{{ .Title }}</h1>
+    <div class="accent-line"></div>
+</section>
+
+<section class="row-list">
+    {{ range .Data.Terms }}
+        <article class="card card--row hover-lift">
+            <div class="card-date">{{ .Count }} items</div>
+            <div class="card-body">
+                <h3 class="card-title">
+                    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+                </h3>
+            </div>
+        </article>
+    {{ end }}
+</section>
+
+{{ end }}

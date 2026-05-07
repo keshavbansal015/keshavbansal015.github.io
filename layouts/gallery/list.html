@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<section class="page-header">
+    <h1>Gallery</h1>
+</section>
+
+<section class="gallery-grid">
+    {{ range .Pages }}
+        {{ partial "cards/render.html" . }}
+    {{ end }}
+</section>
+
+{{ end }}

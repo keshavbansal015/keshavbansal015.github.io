@@ -1,0 +1,219 @@
+/* =========================
+   BASE CARD
+========================= */
+
+.card-base {
+  position: relative;
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-4);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.card {
+  @extend .card-base;
+  position: relative;
+  overflow: hidden;
+}
+/* =========================
+   BASE HOVER
+========================= */
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--outline);
+}
+
+/* =========================
+   CARD BODY
+========================= */
+
+.card-body {
+  padding: var(--space-5);
+}
+
+/* =========================
+   CARD MEDIA
+========================= */
+
+.card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-media img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-media img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   CARD OVERLAY
+========================= */
+
+.card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: var(--space-5);
+
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.85)
+  );
+
+  color: white;
+
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-overlay {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   VARIANTS
+   (THIS REPLACES row-item + project-row)
+========================================================= */
+
+/* =========================
+   CARD: ROW VARIANT
+========================= */
+
+.card--row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-3);
+}
+
+
+/* accent bar */
+.card--row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    var(--secondary),
+    var(--secondary-container)
+  );
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card--row:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   CARD: PROJECT VARIANT
+========================= */
+
+.card--project {
+  padding: var(--space-5);
+
+  border-radius: var(--radius-3);
+}
+
+/* top accent */
+.card--project::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background: var(--primary);
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card--project:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   CARD META
+========================= */
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.card-title {
+  font-size: var(--fs-2);
+  font-weight: 600;
+
+  color: var(--on-surface);
+
+  margin: 0;
+}
+
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.card-title a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   DATE / LABEL COLUMN
+========================= */
+
+.card-date {
+  color: var(--primary);
+
+  font-family: var(--font-mono);
+  font-size: var(--fs-6);
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+
+  padding-top: 4px;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.card-text {
+  color: var(--on-surface-variant);
+  font-size: var(--fs-4);
+  line-height: 1.6;
+}

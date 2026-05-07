@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<article class="single-post project-post">
+
+    <header class="post-header">
+        <div class="project-meta-header">
+            <span class="project-code-badge">{{ .Params.code }}</span>
+        </div>
+
+        <h1>{{ .Title }}</h1>
+        <p class="project-summary">{{ .Params.summary }}</p>
+
+        {{ with .Params.tags }}
+        <div class="tags" style="margin-top: var(--space-4);">
+            {{ range . }}
+                <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+
+    {{ with .Params.image }}
+    <div class="project-image">
+        <img src="{{ . }}" alt="{{ $.Title }}" style="width: 100%; border-radius: var(--radius-4); margin-bottom: var(--space-6);">
+    </div>
+    {{ end }}
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+
+</article>
+
+{{ end }}

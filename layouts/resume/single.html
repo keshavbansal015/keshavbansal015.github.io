@@ -1,0 +1,81 @@
+{{ define "main" }}
+
+<section class="resume-header animate-fade-in">
+    <span class="resume-label">CURRICULUM VITAE</span>
+    <h1 class="resume-title">Professional History</h1>
+    <div class="resume-accent-line"></div>
+</section>
+
+<article class="resume-cv animate-fade-in">
+    {{ with .Params.experience }}
+    <section class="cv-section">
+        <div class="section-label">EXPERIENCE</div>
+        <div class="timeline">
+            {{ range . }}
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3 class="job-title">{{ .title }}</h3>
+                            <span class="company-name">{{ .company }}</span>
+                        </div>
+                        <span class="job-period">{{ .period }}</span>
+                    </div>
+                    <div class="job-details">
+                        {{ with .problems }}
+                        <div class="detail-column">
+                            <h4 class="detail-label">PROBLEMS SOLVED</h4>
+                            <ul class="detail-list">
+                                {{ range . }}
+                                <li>{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                        {{ with .impact }}
+                        <div class="detail-column">
+                            <h4 class="detail-label">IMPACT</h4>
+                            <ul class="detail-list">
+                                {{ range . }}
+                                <li>{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.education }}
+    <section class="cv-section">
+        <div class="section-label">EDUCATION</div>
+        <div class="education-grid">
+            {{ range . }}
+            <div class="education-card">
+                <span class="degree-label">{{ .degree }}</span>
+                <h3 class="institution-name">{{ .institution }}</h3>
+                <p class="degree-focus">{{ .focus }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.skills }}
+    <section class="cv-section">
+        <div class="section-label">STACK</div>
+        <div class="stack-grid">
+            {{ range . }}
+            <span class="stack-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</article>
+
+{{ end }}

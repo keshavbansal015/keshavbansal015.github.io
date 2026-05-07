@@ -1,0 +1,123 @@
+:root {
+  /* =========================
+     COLORS - Navy & Beige Theme
+  ========================== */
+
+  /* Primary: Warm Tan/Beige */
+  --primary: #a68b5b;
+  --on-primary: #1a1f2e;
+  --primary-container: #f5e6d3;
+  --on-primary-container: #3d3020;
+
+  /* Secondary: Navy Blue */
+  --secondary: #2d3748;
+  --on-secondary: #f7fafc;
+  --secondary-container: #e2e8f0;
+  --on-secondary-container: #1a202c;
+
+  /* Tertiary: Dark Navy */
+  --tertiary: #1a1f2e;
+  --on-tertiary: #e2e8f0;
+  --tertiary-container: #2d3748;
+  --on-tertiary-container: #f7fafc;
+
+  /* =========================
+     SURFACE COLORS
+  ========================== */
+
+  --surface: #f8f7f4;
+  --surface-container: #f0eeea;
+  --surface-container-high: #e8e5df;
+  --surface-container-low: #f5f4f1;
+  --surface-container-lowest: #ffffff;
+  --surface-variant: #e2ddd4;
+
+  --on-surface: #1a1f2e;
+  --on-surface-variant: #4a5568;
+
+  --background: var(--surface);
+  --on-background: var(--on-surface);
+
+  /* =========================
+     SIDEBAR (Dark Navy)
+  ========================== */
+
+  --sidebar-bg: #1a1f2e;
+  --sidebar-text: #a0aec0;
+  --sidebar-text-hover: #e2e8f0;
+  --sidebar-border: #2d3748;
+  --sidebar-active-bg: rgba(166, 139, 91, 0.15);
+  --sidebar-active-border: #a68b5b;
+
+  /* =========================
+     OUTLINE & BORDERS
+  ========================== */
+
+  --outline: #a0aec0;
+  --outline-variant: #e2e8f0;
+
+  /* =========================
+     SHADOWS
+  ========================== */
+
+  --shadow-sm: 0 1px 2px rgba(26, 31, 46, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(26, 31, 46, 0.1), 0 2px 4px -1px rgba(26, 31, 46, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(26, 31, 46, 0.1), 0 4px 6px -2px rgba(26, 31, 46, 0.05);
+
+  /* =========================
+     FOCUS & INTERACTIONS
+  ========================== */
+
+  --focus-ring: 0 0 0 3px rgba(166, 139, 91, 0.25);
+
+  /* =========================
+     TYPOGRAPHY TOKENS
+     (only raw values, no semantics)
+  ========================== */
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  --fs-1: clamp(32px, 5vw, 48px);
+  --fs-2: clamp(20px, 3vw, 28px);
+  --fs-3: 18px;
+  --fs-4: 16px;
+  --fs-5: 14px;
+  --fs-6: 11px;
+
+  --lh-tight: 1.15;
+  --lh-md: 1.3;
+  --lh-normal: 1.6;
+  --lh-loose: 1.7;
+
+  /* =========================
+     SPACING SCALE
+  ========================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 80px;
+  --space-14: 80px;
+
+  /* =========================
+     RADIUS
+  ========================== */
+
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  --radius-3: 0.75rem;
+  --radius-4: 1rem;
+  --radius-5: 1.5rem;
+
+
+  /* =========================
+     SIDEBAR
+  ========================== */
+
+  --sidebar-width: 250px;
+}

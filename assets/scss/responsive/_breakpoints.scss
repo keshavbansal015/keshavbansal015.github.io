@@ -1,0 +1,37 @@
+ /* =========================
+    BREAKPOINT TOKENS
+ ========================== */
+
+$bp-mobile: 640px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1280px;
+
+/* =========================
+   OPTIONAL MIXINS (recommended)
+   avoids repeating media queries
+========================== */
+
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (max-width: $bp-wide) {
+    @content;
+  }
+}
