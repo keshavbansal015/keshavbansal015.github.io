@@ -1,24 +1,14 @@
-baseURL = 'https://keshavbansal015.github.io/'
+# baseURL = 'https://keshavbansal015.github.io/'
+baseURL = 'http://localhost:1313/'
 languageCode = 'en-us'
 title = 'Software Engineer'
-theme = 'github-style'
-relativeURLs = false
-canonifyURLs = true
+theme = 'brown_notebook'
 
 [params]
     author = "Keshav Bansal"
     description = "Technical portfolio showcasing distributed systems engineering and backend architecture expertise."
     github = "keshavbansal015"
     linkedin = "keshav-bansal-015"
-
-[markup]
-    [markup.goldmark]
-        [markup.goldmark.renderer]
-            unsafe = true
-
-[permalinks]
-    blogs = "/blogs/:slug/"
-    projects = "/projects/:slug/"
 
 [menu]
     [[menu.main]]
@@ -27,32 +17,24 @@ canonifyURLs = true
         weight = 10
     [[menu.main]]
         name = "Blogs"
-        url = "/blogs/"
+        url = "/blogs"
         weight = 20
     [[menu.main]]
         name = "Projects"
-        url = "/projects/"
+        url = "/projects"
         weight = 30
     [[menu.main]]
         name = "Resume"
-        url = "/resume/"
+        url = "/resume"
         weight = 40
     [[menu.main]]
         name = "Gallery"
-        url = "/gallery/"
+        url = "/gallery"
         weight = 50
     [[menu.main]]
         name = "Contact"
-        url = "/contact/"
+        url = "/contact"
         weight = 60
 
-[module]
-  [[module.mounts]]
-    source = "themes/github-style/layouts"
-    target = "layouts"
-  [[module.mounts]]
-    source = "themes/github-style/assets"
-    target = "assets"
-  [[module.mounts]]
-    source = "themes/github-style/static"
-    target = "static"
+[taxonomies]
+    tag = "tags"

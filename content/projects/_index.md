@@ -1,4 +1,7 @@
 ---
-title: "Engineering Projects"
-description: "A curated selection of systems and infrastructure projects."
+title: "Projects"
+draft: false
 ---
+
+This is a test projects page.
+Index page for projects.
