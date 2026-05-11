@@ -6,20 +6,18 @@ experience:
     company: "University of Texas at Arlington"
     period: "2024 — Present"
     problems:
-      - "Optimized distributed data pipelines handling 5TB+ monthly telemetry throughput."
-      - "Architected high-availability consensus modules for decentralized research nodes."
+      - "Evaluated and benchmarked architectures (Snoopy, rORAM, Treebeard), improving performance profiling and system insights."
+      - "Automated multi-node cluster setup using Ansible on Chameleon Cloud, reducing setup time and ensuring reproducibility."
     impact:
-      - "Reduced latency in critical processing tasks by 42% through efficient memory mapping."
-      - "Authored technical documentation securing $250k in federal grant extensions."
+      - "Mentored over 350 students enrolled in GPU Programming, Computer Vision, Linear Algebra, Cloud Computing, and Big Data, explaining challenging concepts to both Computer Science and Computer Engineering majors."
   - title: "Software Development Engineer"
-    company: "Maxgen Technologies"
+    company: "TAFZS.com"
     period: "2020 — 2022"
     problems:
-      - "Resolved race conditions in legacy multi-threaded transaction logs using refined locking primitives."
-      - "Re-engineered RESTful microservices for improved fault tolerance and auto-scaling capabilities."
+      - "Developed 10+ ETL pipelines using Python, Azure Data Lake, AWS S3, and connected them to Power BI."
+      - "Re-engineered Cron Jobs for improved fault tolerance and logging capabilities."
     impact:
-      - "Achieved 99.99% uptime for core payment services during peak enterprise traffic."
-      - "Streamlined developer onboarding time by 30% through containerized dev environments."
+      - "Collaborated with one other intern in an Agile environment to maintain existing pipelines and cron jobs and develop custom data parsers to improve the data ingestion layer."
 education:
   - degree: "M.S. Computer Science"
     institution: "University of Texas at Arlington"
@@ -32,7 +30,6 @@ education:
 skills:
   - "Python"
   - "Java"
-  - "C#"
   - "Go"
   - "TypeScript"
   - "Spring Boot"
