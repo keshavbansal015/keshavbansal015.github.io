@@ -84,7 +84,7 @@ public class SimpleHttpServer {
 * Scanner:
    This module is used for parsing primitive types and strings using regular expressions.
 
-![Hello World](HelloWorld.png)
+![Hello World](./HelloWorld.png)
 
 - You can see the requests getting logged in the terminal.
   Now we can only send "GET" requests from the browser.
@@ -193,7 +193,7 @@ response.append("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n");
 
 ```
 
-![APOD Sample](APOD.png)
+![APOD Sample](./APOD.png)
 
 Now, a small discussion for other module used in this code,
 
@@ -307,7 +307,7 @@ public class GetThisJoke {
 
 ```
 
-![Sample joke](joke.png)
+![Sample joke](./joke.png)
 
 
 ### Now, lets try running 2 (you can run more) servers on the same port and make them talk to each other
@@ -377,8 +377,8 @@ public class Server1 {
 Server 2 code is same with minor differences in print statements.
 When you run them:
 
-![Server Terminal](server.png)
-![Client Terminal](client.png)
+![Server Terminal](./server.png)
+![Client Terminal](./client.png)
 
 * BufferedReader: Used for reading text from a character-based input stream (e.g., reading messages from the client).
 * InputStreamReader: Converts bytes into characters. In this context, it's used to wrap the InputStream from the Socket to create a BufferedReader for reading messages.
