@@ -20,8 +20,8 @@
     </header>
 
     {{ with .Params.image }}
-    <div class="project-image">
-        <img src="{{ . }}" alt="{{ $.Title }}" style="width: 100%; border-radius: var(--radius-4); margin-bottom: var(--space-6);">
+    <div class="project-image" style="display: flex; justify-content: center; margin-bottom: var(--space-6);">
+        <img src="{{ . }}" alt="{{ $.Title }}" style="max-width: 100%; height: auto; max-height: 400px; object-fit: contain; border-radius: var(--radius-4);">
     </div>
     {{ end }}
 

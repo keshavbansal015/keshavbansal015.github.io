@@ -96,10 +96,14 @@
 
 .card--row {
   display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: var(--space-6);
-  padding: var(--space-6);
+  grid-template-columns: 100px 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-3);
+
+  .card-body {
+    padding: 10px 0;
+  }
 }
 
 
@@ -216,4 +220,5 @@
   color: var(--on-surface-variant);
   font-size: var(--fs-4);
   line-height: 1.6;
+  margin: var(--space-2) 0 var(--space-3) 0;
 }
